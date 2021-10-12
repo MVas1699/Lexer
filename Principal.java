@@ -234,6 +234,8 @@ public class Principal extends javax.swing.JFrame {
         File archivo = fc.getSelectedFile();
 
         int nroLinea = 1;
+        
+        //Lectura del archivo seleccionado
 
         try{
             FileReader fr = new FileReader (archivo);
@@ -295,6 +297,8 @@ public class Principal extends javax.swing.JFrame {
                     JOptionPane.showMessageDialog(null, resultado);
                     return;
                 }
+                
+                //Manejador de errores
                 
                 switch(tokens){
                     case ERROR:
