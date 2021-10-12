@@ -323,13 +323,8 @@ public class Principal extends javax.swing.JFrame {
                                         lex.add(lexer.lexeme);
                                         nro.add(lexer.GetLine());
                                         tabla.put(lex, tok);
-                                        
-                                        pos = (int) Math.floor(Math.random() * 13 +1);
-            
-                                       while(nroT.contains(pos)){
-                                       pos = (int) Math.floor(Math.random() * 13 +1);
-                                       }
-                                        nroT.add(pos);
+                             
+                                        nroT.add(hash.funcionhash(lex, hash.arreglo)); //Enviamos los argumentos a la clase TablaHash;
                                         
                                         break;
                     case Entero:
@@ -339,11 +334,7 @@ public class Principal extends javax.swing.JFrame {
                                         nro.add(lexer.GetLine());
                                         tabla.put(lex, tok);
                                         
-                                        pos = (int) Math.floor(Math.random() * 13 +1);
-                                        while(nroT.contains(pos)){
-                                       pos = (int) Math.floor(Math.random() * 13 +1);
-                                       }
-                                        nroT.add(pos);
+                                        nroT.add(hash.funcionhash(lex, hash.arreglo)); //Enviamos los argumentos a la clase TablaHash;
                                         break;
                                         
                     case CadenaNoValida:
